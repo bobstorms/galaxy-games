@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Galaxy Games | Update statistics
+        link(rel='stylesheet', href='./stylesheets/style.css')
+    body 
+        h1 Galaxy Games
+        h2 Update statistics
+        form(class="update-form")
+            select(name="team", id="team")
+                each team in teams
+                    option(value= team.id)= team.name
+            input(type="number", name="score", id="score")
+            input(type="submit", value="Update score", class="submit-button")
+        .error
+        script(src="../primus/primus.js")
+        script(src="../javascripts/update.js")

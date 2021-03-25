@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Galaxy Games | Dashboard
+        link(rel='stylesheet', href='./stylesheets/style.css')
+    body 
+        h1 Galaxy Games
+        table 
+            tr
+                th Code 
+                th Team 
+                th Score 
+            each team in teams
+                tr(id= team.id)
+                    td(class="code")= team.code
+                    td(class="name")= team.name
+                    td(class="score")= team.score
+        script(src="../primus/primus.js")
+        script(src="../javascripts/dashboard.js") 
